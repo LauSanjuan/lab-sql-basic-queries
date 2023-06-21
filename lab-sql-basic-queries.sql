@@ -25,8 +25,8 @@ SELECT count(store_id) FROM sakila.store;
 -- 5.2 Determine the number of employees that the company has.
 SELECT COUNT(staff_id) FROM sakila.staff;
 -- 5.3 Determine how many films are available for rent and how many have been rented.
-SELECT COUNT(*) FROM sakila.inventory;
-SELECT COUNT(DISTINCT INVENTORY_id) FROM sakila.rental;
+SELECT COUNT(DISTINCT film_id) FROM sakila.inventory; -- how many films
+SELECT COUNT(DISTINCT INVENTORY_id) FROM sakila.rental; -- how many copies, as in the table rental we don't have a column to distinguish films
 -- 5.4 Determine the number of distinct last names of the actors in the database.
 SELECT COUNT(DISTINCT last_name) FROM sakila.actor;
 
